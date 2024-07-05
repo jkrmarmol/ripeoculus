@@ -20,6 +20,7 @@ export default function WebCamScreenshot() {
     setLoadingModal(true);
     if (camera.current) {
       const data = camera.current.takePhoto();
+      camera.current.switchCamera();
       const { payload } = await dispatch(ripeValidate(data as any));
       setLoadingModal(false);
       setValidatedModal(true);
