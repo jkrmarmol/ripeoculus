@@ -10,14 +10,7 @@ export default function GoogleSignInButton() {
   const callbackUrl = searchParams.get('callbackUrl');
 
   return (
-    <Button
-      className="w-full"
-      variant="outline"
-      type="button"
-      onClick={() =>
-        signIn('github', { callbackUrl: callbackUrl ?? '/dashboard' })
-      }
-    >
+    <Button className="w-full" variant="outline" type="button" onClick={() => signIn('github', { callbackUrl: callbackUrl ?? '/dashboard' })}>
       <Icons.gitHub className="mr-2 h-4 w-4" />
       Continue with Github
     </Button>

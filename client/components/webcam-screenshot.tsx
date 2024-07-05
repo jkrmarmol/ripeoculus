@@ -29,7 +29,13 @@ export default function WebCamScreenshot() {
   return (
     <>
       <Dialog open={validatedModal} onOpenChange={setValidatedModal}>
-        <ViewFruitValidated src={selectRipeValidated.response.images} alt="sdf" recommendation={selectRipeValidated.response.recommendation} ripePercentage={selectRipeValidated.response.ripeNess} title={selectRipeValidated.response.name} />
+        <ViewFruitValidated
+          src={selectRipeValidated.response.images}
+          alt="sdf"
+          recommendation={selectRipeValidated.response.recommendation}
+          ripePercentage={selectRipeValidated.response.ripeNess}
+          title={selectRipeValidated.response.name}
+        />
       </Dialog>
       <Dialog
         open={loadingModal}
